@@ -4,17 +4,20 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Studio</title>
+        <title>Portfolio</title>
+
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
             href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
             rel="stylesheet"
         />
+
         <link
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"
         />
+
         <link rel="stylesheet" href="./css/styles.css" />
     </head>
     <body>
@@ -48,39 +51,32 @@
 
                 <ul class="connection-list list">
                     <li class="connection-list-item">
-                        <a href="" class="connection-list-link link">
-                            <svg
-                                class="connection-list-icon-mail"
+                        <a
+                            href="mailto:info@devstudio.com"
+                            class="connection-list-link link"
+                            ><svg
+                                class="connection-list-icon"
                                 width="16"
                                 height="12"
                             >
                                 <use
                                     href="./images/sprite.svg#icon-envelope"
-                                ></use>
-                            </svg>
-                        </a>
-
-                        <a
-                            href="mailto:info@devstudio.com"
-                            class="connection-list-link link"
+                                ></use></svg
                             >info@devstudio.com</a
                         >
                     </li>
                     <li class="connection-list-item">
-                        <a href="" class="connection-list-link link">
-                            <svg
-                                class="connection-list-icon-phone"
+                        <a
+                            href="tel:+380961111111"
+                            class="connection-list-link link"
+                            ><svg
+                                class="connection-list-icon"
                                 width="10"
                                 height="16"
                             >
                                 <use
                                     href="./images/sprite.svg#icon-smartphone"
-                                ></use>
-                            </svg>
-                        </a>
-                        <a
-                            href="tel:+380961111111"
-                            class="connection-list-link link"
+                                ></use></svg
                             >+38 096 111 11 11</a
                         >
                     </li>
@@ -94,7 +90,7 @@
                         Ефективні рішення для вашого бізнесу
                     </h1>
 
-                    <button type="button" class="hero-button">
+                    <button type="button" class="hero-button" data-modal-open>
                         Замовити послугу
                     </button>
                 </div>
@@ -186,27 +182,50 @@
             <section class="examples-section section">
                 <div class="container">
                     <h2 class="examples-title title list">Чим ми займаємося</h2>
+
                     <ul class="examples-list list">
                         <li class="examples-item">
-                            <img
-                                src="./images/programmings.jpg"
-                                alt="пишемо програми для комп'ютерів"
-                                width="370"
-                            />
+                            <div class="examples-background">
+                                <img
+                                    src="./images/programmings.jpg"
+                                    alt="пишемо програми для комп'ютерів"
+                                    width="370"
+                                />
+                                <div class="examples-background-overlay">
+                                    <p class="examples-background-text">
+                                        Десктопні додатки
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="examples-item">
+                            <div class="examples-background">
+                                <img
+                                    src="./images/apps.jpg"
+                                    alt="створюємо мобільні додатки"
+                                    width="370"
+                                />
+                                <div class="examples-background-overlay">
+                                    <p class="examples-background-text">
+                                        Мобільні додатки
+                                    </p>
+                                </div>
+                            </div>
                         </li>
                         <li class="examples-item">
-                            <img
-                                src="./images/apps.jpg"
-                                alt="створюємо мобільні додатки"
-                                width="370"
-                            />
-                        </li>
-                        <li class="examples-item">
-                            <img
-                                src="./images/settings.jpg"
-                                alt="тонкі налаштування обладнання"
-                                width="370"
-                            />
+                            <div class="examples-background">
+                                <img
+                                    src="./images/settings.jpg"
+                                    alt="тонкі налаштування обладнання"
+                                    width="370"
+                                />
+                                <div class="examples-background-overlay">
+                                    <p class="examples-background-text">
+                                        Дизайнерські рішення
+                                    </p>
+                                </div>
+                            </div>
                         </li>
                     </ul>
                 </div>
@@ -746,5 +765,16 @@
                 </ul>
             </div>
         </footer>
+
+        <div class="backdrop is-hidden" data-modal>
+            <div class="modal">
+                <button type="button" class="modal-close-btn" data-modal-close>
+                    <svg class="modal-close-btn-icon" width="11" height="11">
+                        <use href="./images/sprite.svg#icon-cross"></use>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <script src="./js/modal.js"></script>
     </body>
 </html>
