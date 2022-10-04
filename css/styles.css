@@ -373,8 +373,8 @@ button {
     font-size: 16px;
     line-height: 1.62;
 
-    transition: background-color var(--transition-dur-and-func),
-        color var(--transition-dur-and-func);
+    transition: background-color var(--transition-dur-and-func);
+    /* color var(--transition-dur-and-func); */
 }
 
 .button-secondary:hover,
@@ -382,6 +382,7 @@ button {
     color: var(--header-color);
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
         0px 2px 2px rgba(0, 0, 0, 0.12);
+
     background-color: var(--accent-color);
 }
 
@@ -406,15 +407,17 @@ button {
 }
 
 .benefits-list-icon {
+    fill: var(--title-text-color);
+}
+
+.benefits-element {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 270px;
     height: 120px;
     margin-bottom: 30px;
     border-radius: 4px;
     background-color: #f5f4fa;
-    fill: var(--title-text-color);
 }
 
 .benefits-list-theme {
@@ -574,6 +577,7 @@ button {
 
 .social-list-icon {
     fill: #afb1b8;
+    transition: fill var(--transition-dur-and-func);
 }
 
 .social-list-link:hover .social-list-icon,
@@ -696,7 +700,7 @@ button {
 
 .our-clients-section-icon {
     fill: #afb1b8;
-    transition: fill var(--transition-dur-and-func);
+    /* transition: fill var(--transition-dur-and-func); */
 }
 
 .our-clients-section-list-link:hover,
@@ -836,9 +840,10 @@ button {
     position: absolute;
     width: 528px;
     height: 581px;
-    left: 456px;
-    top: 199px;
-    z-index: 2;
+    margin: auto;
+    /* z-index: 2; */
+    top: 50%;
+    left: 50%;
 
     background-color: var(--header-color);
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -849,7 +854,7 @@ button {
     animation-duration: 3000ms;
     animation-timing-function: ease-in-out;
     animation-delay: 1000ms; */
-    transform: scale(1.25);
+    transform: translate(-50%, -50%);
 }
 
 /* @keyframes changeBgColor {
@@ -900,3 +905,7 @@ button {
 }
 
 /* =========== /modal ============ */
+
+/* ============ contacts form =========== */
+
+/* ============ /contacts form =========== */
